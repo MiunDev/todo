@@ -36,6 +36,7 @@ class TaskComplete(View):
 
         return JsonResponse({'task': model_to_dict(task)})
 
+
 class TaskDelete(View):
     def post(self, request, id):
         task = Task.objects.get(id=id)
